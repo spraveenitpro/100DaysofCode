@@ -18,6 +18,7 @@ const App = () => {
 
   const deleteUser = (id) => {
     setUsers(users.filter((user) => user.id !== id));
+    console.log();
   };
 
   return (

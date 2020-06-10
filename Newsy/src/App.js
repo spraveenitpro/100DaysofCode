@@ -54,8 +54,6 @@ const App = () => (
           <Route path="/submit" component={Submit} />
           <Route path="/search" component={Search} />
           <Route path="/profile" component={Profile} />
-
-          <Route component={() => <Redirect to="/news" />} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="news" href="/news">

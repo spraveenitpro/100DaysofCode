@@ -18,3 +18,14 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 22nd: June 12, 2020
+
+**Today's Progress**:
+
+1. Completed 2 exercises from Basic Algorithm scripting - FreeCodeCamp
+2. Stopped working on the HN clone with Ionic framework
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

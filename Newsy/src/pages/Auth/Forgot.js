@@ -15,7 +15,7 @@ import NavHeader from "../../components/Header/NavHeader";
 const Forgot = () => {
   return (
     <IonPage>
-      <NavHeader title="Login" />
+      <NavHeader title="Password Reset" />
       <IonContent>
         <IonItem lines="full">
           <IonLabel position="floating">Email</IonLabel>
@@ -23,11 +23,10 @@ const Forgot = () => {
         </IonItem>
 
         <IonRow>
-          <IonCol class="ion-text-center ion-padding-vertical">
-            <IonRouterLink routerLink={"/forgot"}>
-              {" "}
-              Forgot Password
-            </IonRouterLink>
+          <IonCol>
+            <IonButton type="submit" color="primary" expand="block">
+              Get Reset Link
+            </IonButton>
           </IonCol>
         </IonRow>
       </IonContent>

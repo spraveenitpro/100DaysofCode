@@ -3,10 +3,7 @@ import React from "react";
 function Header() {
   return (
     <header>
-      <img
-        src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
-        alt="troll"
-      />
+      <img src="https://d.pr/i/OTRCVr+" alt="troll" />
       <p>Meme Generator</p>
     </header>
   );

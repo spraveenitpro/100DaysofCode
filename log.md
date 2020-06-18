@@ -41,7 +41,7 @@
 
 **Link to work:** NA
 
-### Day 23rd: June 16, 2020
+### Day 24th: June 16, 2020
 
 **Today's Progress**:
 
@@ -51,7 +51,7 @@
 
 **Link to work:** NA
 
-### Day 24th: June 17, 2020
+### Day 25th: June 17, 2020
 
 **Today's Progress**:
 

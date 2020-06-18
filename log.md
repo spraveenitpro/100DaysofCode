@@ -50,3 +50,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 24th: June 17, 2020
+
+**Today's Progress**:
+
+1. Completed building the color picker app in React Native
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

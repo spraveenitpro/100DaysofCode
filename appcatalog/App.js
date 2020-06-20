@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import { StyleSheet, FlatList, Alert } from "react-native";
 import ColorButton from "./components/ColorButton";
 import { generate } from "shortid";
+import { useColors } from "./hooks";
 
 //import defaultColors from "./data/defaultColors.json";
 import ColorForm from "./components/ColorForm";
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState("blue");
-  const [colors, setColors] = useState([]);
-  const addColor = (color) => {
-    const newColor = { id: generate(), color };
-    setColors([newColor, ...colors]);
-  };
+  const { colors, addColor } = useColors();
+
   return (
     <>
       <ColorForm onNewColor={(newColor) => addColor(newColor)} />

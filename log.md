@@ -60,3 +60,14 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 30th: June 22, 2020
+
+**Today's Progress**:
+
+1. Started Functional Programming with FreeCodeCamp
+2. Began building `4 in a Row` game in plain JS
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Color Picker app in React Native to learn React Native",
+    "githubUrl": "https://github.com/spraveenitpro"
   }
 }

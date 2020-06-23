@@ -107,3 +107,5 @@ dist
 firebase.js
 keys.js
 
+# Mac
+.DS_Store

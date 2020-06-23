@@ -120,7 +120,7 @@
 // }
 // console.log(mutation(["Mary", "army"]));
 
-
+/* 
 function chunkArrayInGroups(arr, size) {
   var newArr = [];
 
@@ -132,3 +132,65 @@ function chunkArrayInGroups(arr, size) {
 }
 
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+ */
+/* 
+function Bird() {
+  this.name = "Albert";
+  this.color  = "blue";
+  this.numLegs = 2;
+  // "this" inside the constructor always refers to the object being created
+}
+
+let bluebird = new Bird();
+console.log(bluebird.name) */
+
+/* function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Only change code below this line
+
+for (let property in beagle) {
+  if (beagle.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
+}
+
+console.log(ownProps);
+console.log(prototypeProps); */
+
+// The global variable
+var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+
+function add (arr, name) {
+var newBookList = [...arr];
+newBookList.push(name)
+return newBookList;
+}
+
+function remove (arr, name) {
+
+  var newBookList = [...arr];
+  var book_index = newBookList.indexOf(name);
+
+  if (book_index > 0) {
+    newBookList.splice(book_index,1);
+    return newBookList;
+  }
+}
+
+
+var newBookList = add(bookList, 'A Brief History of Time');
+console.log(newBookList);
+
+var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');

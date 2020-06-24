@@ -25,4 +25,4 @@ class Player {
   }
 }
 
-let p = new Player("pete", 2, "blue");
+//let p = new Player("pete", 2, "blue");

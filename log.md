@@ -71,3 +71,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 31: June 23, 2020
+
+**Today's Progress**:
+
+1. Continued building `4 in a Row` game in plain JS
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

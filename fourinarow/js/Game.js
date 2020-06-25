@@ -16,4 +16,11 @@ class Game {
     ];
     return players;
   }
+
+  /**
+   *Gets Game ready for play
+   *
+   * @memberof Game
+   */
+  startGame() {}
 }

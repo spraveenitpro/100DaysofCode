@@ -1,10 +1,9 @@
-//import Token from "./Token";
 class Player {
   constructor(name, id, color, active = false) {
     this.name = name;
     this.id = id;
     this.color = color;
-    this.active = false;
+    this.active = active;
     this.tokens = this.createTokens(21);
   }
 
@@ -23,6 +22,24 @@ class Player {
 
     return tokens;
   }
-}
 
-//let p = new Player("pete", 2, "blue");
+  /**
+   * Gets all tokens that haven't been dropped
+   *
+   * @readonly
+   * @memberof Player
+   */
+  get unusedTokens() {
+    return this.tokens.filter((token) => !token.dropped);
+  }
+
+  /**
+   * Gets the active token by returning the first token in the array of unused tokens
+   *
+   * @readonly
+   * @memberof Player
+   */
+  get activeToken() {
+    return this.unusedTokens[0];
+  }
+}

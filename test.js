@@ -1,196 +1,300 @@
-// function findLongestWordLength(str) {
-//   const words = str.split(" ");
-//   const newArr = [];
-//   for (var i = 0; i < words.length; i++) {
-//     newArr.push(words[i].length);
-//   }
-//   return Math.max(...newArr);
-// }
+// The global variable
+var s = [23, 65, 98, 5];
 
-// console.log(
-//   findLongestWordLength("The quick brown fox jumped over the lazy dog")
-// );
+Array.prototype.myMap = function (callback) {
+  var newArray = [];
+  // Only change code below this line
 
-// function largestOfFour(arr) {
-//   const newArr =[];
-//   for (var i =0; i < arr.length; i++) {
-//     var tempArr = arr[i];
-//     newArr.push(Math.max(...tempArr) )
-//   }
-//   return newArr;
-// }
+  this.forEach((a) => newArray.push(callback(a)));
 
-// console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+  // Only change code above this line
+  return newArray;
+};
 
-// function confirmEnding(str, target) {
+var new_s = s.myMap(function (item) {
+  return item * 2;
+});
 
-//   if (str.slice(str.length - target.length) === target) {
-//     return true;
-//   }
+const users = [
+  { name: "John", age: 34 },
+  { name: "Amy", age: 20 },
+  { name: "camperCat", age: 10 },
+];
 
-// }
+const usersUnder30 = users.filter((user) => user.age > 30);
 
-// console.log(confirmEnding("Bastian", "n"));
-
-// function repeatStringNumTimes(str, num) {
-//   var newval = "";
-
-//   for (let i = 1; i <= num; i++) {
-//     newval = newval.concat("", str);
-//   }
-//   return newval;
-// }
-
-// console.log(repeatStringNumTimes("abc", 3));
-
-// function truncateString(str, num) {
-//   if(str.length > num) {
-//     return str.slice(0, num).concat("","...")
-//   } else {
-//     return str.slice(0, num)
-//   }
-// }
-
-// console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
-// console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
-
-// function findElement(arr, func) {
-//   let num = 0;
-//   for (var i = 0; i < arr.length; i++) {
-//     num = arr[i];
-//     if (func(num)) {
-//       return num;
-//     }
-//   }
-//   return undefined;
-// }
-
-// findElement([1, 2, 3, 4], (num) => num % 2 === 0);
-
-// function titleCase(str) {
-// var convertToArray = str.toLowerCase().split(" ");
-// var result = convertToArray.map(function(val) {
-//   return val.replace(val.charAt(0),val.charAt(0).toUpperCase())
-// })
-
-// return result.join( " ");
-// }
-
-// console.log(titleCase("I'm a little tea pot"));
-
-// function frankenSplice( arr1, arr2, n) {
-
-//   let localArr = arr2.slice();
-//   localArr.splice(n,0, ...arr1);
-//   return localArr
-// }
-
-// console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
-
-// function bouncer(arr) {
-
-//   var newArr= [];
-
-//   for (let i = 0; i< arr.length; i++) {
-//     if (arr[i]) {
-//       newArr.push(arr[i])
-//     }
-
-//   }
-//   return newArr;
-
-// }
-
-// console.log(bouncer([7, "ate", "", false, 9]));
-
-// var arr = [23,12,1,34,21,2];
-
-// console.log(arr.sort(function(a,b) {
-//   return a-b;
-// }));
-
-// function mutation(arr) {
-//   var test = arr[1].toLowerCase();
-//   var target = arr[0].toLowerCase();
-
-//   for (var i = 0; i < test.length; i++) {
-//     if (target.indexOf(test[i]) < 0) return false;
-//   }
-//   return true;
-// }
-// console.log(mutation(["Mary", "army"]));
-
-/* 
-function chunkArrayInGroups(arr, size) {
-  var newArr = [];
-
-  for (var i = 0; i < arr.length; i+=size) {
-    newArr.push(arr.slice(i, i+size));
-  }
-
-  return newArr;
-}
-
-console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
- */
-/* 
-function Bird() {
-  this.name = "Albert";
-  this.color  = "blue";
-  this.numLegs = 2;
-  // "this" inside the constructor always refers to the object being created
-}
-
-let bluebird = new Bird();
-console.log(bluebird.name) */
-
-/* function Dog(name) {
-  this.name = name;
-}
-
-Dog.prototype.numLegs = 4;
-
-let beagle = new Dog("Snoopy");
-
-let ownProps = [];
-let prototypeProps = [];
+// The global variable
+var watchList = [
+  {
+    Title: "Inception",
+    Year: "2010",
+    Rated: "PG-13",
+    Released: "16 Jul 2010",
+    Runtime: "148 min",
+    Genre: "Action, Adventure, Crime",
+    Director: "Christopher Nolan",
+    Writer: "Christopher Nolan",
+    Actors: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+    Plot:
+      "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+    Language: "English, Japanese, French",
+    Country: "USA, UK",
+    Awards: "Won 4 Oscars. Another 143 wins & 198 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    Metascore: "74",
+    imdbRating: "8.8",
+    imdbVotes: "1,446,708",
+    imdbID: "tt1375666",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Interstellar",
+    Year: "2014",
+    Rated: "PG-13",
+    Released: "07 Nov 2014",
+    Runtime: "169 min",
+    Genre: "Adventure, Drama, Sci-Fi",
+    Director: "Christopher Nolan",
+    Writer: "Jonathan Nolan, Christopher Nolan",
+    Actors: "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+    Plot:
+      "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    Language: "English",
+    Country: "USA, UK",
+    Awards: "Won 1 Oscar. Another 39 wins & 132 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+    Metascore: "74",
+    imdbRating: "8.6",
+    imdbVotes: "910,366",
+    imdbID: "tt0816692",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "The Dark Knight",
+    Year: "2008",
+    Rated: "PG-13",
+    Released: "18 Jul 2008",
+    Runtime: "152 min",
+    Genre: "Action, Adventure, Crime",
+    Director: "Christopher Nolan",
+    Writer:
+      "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+    Actors: "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+    Plot:
+      "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    Language: "English, Mandarin",
+    Country: "USA, UK",
+    Awards: "Won 2 Oscars. Another 146 wins & 142 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    Metascore: "82",
+    imdbRating: "9.0",
+    imdbVotes: "1,652,832",
+    imdbID: "tt0468569",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Batman Begins",
+    Year: "2005",
+    Rated: "PG-13",
+    Released: "15 Jun 2005",
+    Runtime: "140 min",
+    Genre: "Action, Adventure",
+    Director: "Christopher Nolan",
+    Writer:
+      "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+    Actors: "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+    Plot:
+      "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+    Language: "English, Urdu, Mandarin",
+    Country: "USA, UK",
+    Awards: "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+    Metascore: "70",
+    imdbRating: "8.3",
+    imdbVotes: "972,584",
+    imdbID: "tt0372784",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Avatar",
+    Year: "2009",
+    Rated: "PG-13",
+    Released: "18 Dec 2009",
+    Runtime: "162 min",
+    Genre: "Action, Adventure, Fantasy",
+    Director: "James Cameron",
+    Writer: "James Cameron",
+    Actors: "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    Plot:
+      "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    Language: "English, Spanish",
+    Country: "USA, UK",
+    Awards: "Won 3 Oscars. Another 80 wins & 121 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+    Metascore: "83",
+    imdbRating: "7.9",
+    imdbVotes: "876,575",
+    imdbID: "tt0499549",
+    Type: "movie",
+    Response: "True",
+  },
+];
 
 // Only change code below this line
 
-for (let property in beagle) {
-  if (beagle.hasOwnProperty(property)) {
-    ownProps.push(property);
-  } else {
-    prototypeProps.push(property);
-  }
-}
+const filteredList = watchList
+  .map((movie) => {
+    return {
+      title: movie.Title,
+      rating: movie.imdbRating,
+    };
+  })
+  .filter((movie) => {
+    return parseFloat(movie.rating) >= 8.0;
+  });
 
-console.log(ownProps);
-console.log(prototypeProps); */
+// Only change code above this line
 
+filteredList;
 // The global variable
-var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+var watchList = [
+  {
+    Title: "Inception",
+    Year: "2010",
+    Rated: "PG-13",
+    Released: "16 Jul 2010",
+    Runtime: "148 min",
+    Genre: "Action, Adventure, Crime",
+    Director: "Christopher Nolan",
+    Writer: "Christopher Nolan",
+    Actors: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+    Plot:
+      "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+    Language: "English, Japanese, French",
+    Country: "USA, UK",
+    Awards: "Won 4 Oscars. Another 143 wins & 198 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    Metascore: "74",
+    imdbRating: "8.8",
+    imdbVotes: "1,446,708",
+    imdbID: "tt1375666",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Interstellar",
+    Year: "2014",
+    Rated: "PG-13",
+    Released: "07 Nov 2014",
+    Runtime: "169 min",
+    Genre: "Adventure, Drama, Sci-Fi",
+    Director: "Christopher Nolan",
+    Writer: "Jonathan Nolan, Christopher Nolan",
+    Actors: "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+    Plot:
+      "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    Language: "English",
+    Country: "USA, UK",
+    Awards: "Won 1 Oscar. Another 39 wins & 132 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+    Metascore: "74",
+    imdbRating: "8.6",
+    imdbVotes: "910,366",
+    imdbID: "tt0816692",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "The Dark Knight",
+    Year: "2008",
+    Rated: "PG-13",
+    Released: "18 Jul 2008",
+    Runtime: "152 min",
+    Genre: "Action, Adventure, Crime",
+    Director: "Christopher Nolan",
+    Writer:
+      "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+    Actors: "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+    Plot:
+      "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    Language: "English, Mandarin",
+    Country: "USA, UK",
+    Awards: "Won 2 Oscars. Another 146 wins & 142 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    Metascore: "82",
+    imdbRating: "9.0",
+    imdbVotes: "1,652,832",
+    imdbID: "tt0468569",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Batman Begins",
+    Year: "2005",
+    Rated: "PG-13",
+    Released: "15 Jun 2005",
+    Runtime: "140 min",
+    Genre: "Action, Adventure",
+    Director: "Christopher Nolan",
+    Writer:
+      "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+    Actors: "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+    Plot:
+      "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+    Language: "English, Urdu, Mandarin",
+    Country: "USA, UK",
+    Awards: "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+    Metascore: "70",
+    imdbRating: "8.3",
+    imdbVotes: "972,584",
+    imdbID: "tt0372784",
+    Type: "movie",
+    Response: "True",
+  },
+  {
+    Title: "Avatar",
+    Year: "2009",
+    Rated: "PG-13",
+    Released: "18 Dec 2009",
+    Runtime: "162 min",
+    Genre: "Action, Adventure, Fantasy",
+    Director: "James Cameron",
+    Writer: "James Cameron",
+    Actors: "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    Plot:
+      "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    Language: "English, Spanish",
+    Country: "USA, UK",
+    Awards: "Won 3 Oscars. Another 80 wins & 121 nominations.",
+    Poster:
+      "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+    Metascore: "83",
+    imdbRating: "7.9",
+    imdbVotes: "876,575",
+    imdbID: "tt0499549",
+    Type: "movie",
+    Response: "True",
+  },
+];
 
+// Only change code below this line
 
-function add (arr, name) {
-var newBookList = [...arr];
-newBookList.push(name)
-return newBookList;
-}
+var filteredList;
 
-function remove (arr, name) {
+// Only change code above this line
 
-  var newBookList = [...arr];
-  var book_index = newBookList.indexOf(name);
-
-  if (book_index > 0) {
-    newBookList.splice(book_index,1);
-    return newBookList;
-  }
-}
-
-
-var newBookList = add(bookList, 'A Brief History of Time');
-console.log(newBookList);
-
-var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+console.log(filteredList);

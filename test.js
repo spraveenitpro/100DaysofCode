@@ -251,3 +251,34 @@ function urlSlug(title) {
 // Only change code above this line
 urlSlug("Winter Is Coming"); //?
 urlSlug(" Winter Is  Coming"); //?
+
+
+function unCurried(x,y) {
+  return x + y;
+}
+
+unCurried(4,7) //?
+
+function curried(x) {
+  return function (y) {
+    return x + y;
+  }
+}
+
+curried (3)(5) //?
+
+const curried2 = x => y => x + y;
+
+curried2(2)(5) //?
+
+function add(x) {
+  // Only change code below this line
+
+return function (y) {
+  return function(z) {
+    return x + y + z;
+  }
+}
+  // Only change code above this line
+}
+add(10)(20)(30); //?

@@ -158,12 +158,96 @@ function getRating(watchList) {
   // Only change code below this line
   var averageRating =
     watchList
-      .filter((film) => film.Director === "Christopher Nolan")
-      .map((film) => Number(film.imdbRating))
+      .filter((film) => film.Director === "Christopher Nolan") // Filter out all the movies by Christopher Nolan into a new array
+      .map((film) => Number(film.imdbRating)) // Extract all the imdb ratings into a new array while converting them to a numerical value
       .reduce((acc, rating) => acc + rating) /
-    watchList.filter((film) => film.Director === "Christopher Nolan").length;
+    watchList.filter((film) => film.Director === "Christopher Nolan").length; // Find the average of the IMDB ratings with .reduce
 
   return averageRating;
 }
 
 getRating(watchList); //?
+
+const squareList = (arr) => {
+  // Only change code below this line
+  return arr
+    .filter((number) => number > 0)
+    .filter((number) => Number.isInteger(number)) //?
+    .map((number) => number * number);
+
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]); //?
+
+function ascendingOrder(arr) {
+  return arr.sort(function (a, b) {
+    return a - b;
+  });
+}
+
+ascendingOrder([1, 5, 2, 3, 4]); //?
+
+function reverseAlpha(arr) {
+  return arr.sort(function (a, b) {
+    return a === b ? 0 : a < b ? 1 : -1;
+  });
+}
+
+reverseAlpha(["l", "h", "z", "b", "s"]); //?
+
+function alphabeticalOrder(arr) {
+  return arr.sort(function (a, b) {
+    return a === b ? 0 : a < b ? -1 : 1;
+  });
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]); //?
+
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  return [].concat(arr).sort(function (a, b) {
+    return a - b;
+  });
+
+  // Only change code above this line
+}
+nonMutatingSort(globalArray);
+
+function splitify(str) {
+  // Only change code below this line
+
+  return str.split(/\W/); //?
+  // Only change code above this line
+}
+splitify("Hello World,I-am code");
+
+function sentensify(str) {
+  // Only change code below this line
+
+  return str.split(/\W/).join(" "); //?
+
+  // Only change code above this line
+}
+sentensify("May-the-force-be-with-you");
+
+// The global variable
+var globalTitle = "Winter Is Coming";
+
+// Only change code below this line
+function urlSlug(title) {
+  return title
+    .split(" ")
+    .filter((obj) => {
+      return obj !== "";
+    })
+
+    .join("-")
+    .toLowerCase(); //?
+}
+// Only change code above this line
+urlSlug("Winter Is Coming"); //?
+urlSlug(" Winter Is  Coming"); //?

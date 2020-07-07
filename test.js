@@ -320,15 +320,227 @@ alphabeticalOrder(["a", "d", "c", "a", "z", "g"]); //?
 function diffArray(arr1, arr2) {
   var newArr = [];
 
-  for (var i = 0; i <= arr1.length; i++) {
-    if (arr2.includes(arr1[i])) {
-      console.log("exists");
-    } else {
-      newArr.push(arr1[i]);
+  function notinArray(first, second) {
+    for (var i = 0; i < first.length; i++) {
+      if (second.indexOf(first[i]) === -1) {
+        newArr.push(first[i]);
+      }
     }
   }
+  notinArray(arr1, arr2);
+  notinArray(arr2, arr1);
+
   return newArr;
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);  
-diffArray( [1, 2, 3, 4, 5], [1, 2, 3, 5]);  //?
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); //?
+diffArray(
+  ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
+  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+); //?
+
+function destroyer(arr) {
+  var args = Array.from(arguments).slice(1);
+
+  return arr.filter(function (val) {
+    console.log(val);
+    return !args.includes(val);
+  });
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3); //?
+
+function whatIsInAName(collection, source) {
+  var arr = [];
+  // Only change code below this line
+  var srcKeys = Object.keys(source); //?
+  return collection.filter(function (obj) {
+    for (var i = 0; i < srcKeys.length; i++) {
+      if (
+        !obj.hasOwnProperty(srcKeys[i]) ||
+        obj[srcKeys[i]] !== source[srcKeys[i]]
+      ) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName(
+  [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" },
+  ],
+  { last: "Capulet" }
+);
+
+function spinalCase(str) {
+  return str
+    .split(/\s|_|(?=[A-Z])/) //?
+    .join("-")
+    .toLowerCase();
+}
+
+spinalCase("This Is Spinal Tap"); //?
+
+function sumAll2(arr) {
+  var max = Math.max(...arr);
+  var min = Math.min(...arr);
+  var j = 0;
+  for (var i = min; i <= max; i++) {
+    j = j + i;
+  }
+  return j;
+}
+
+sumAll2([1, 4]); //?
+
+function diffArray2(arr1, arr2) {
+  var newArr = [];
+
+  function checkarr(a1, a2) {
+    for (var i = 0; i < a1.length; i++) {
+      if (a2.indexOf(a1[i]) === -1) {
+        newArr.push(a1[i]);
+      }
+    }
+  }
+  checkarr(arr1, arr2);
+  checkarr(arr2, arr1);
+  return newArr;
+}
+
+diffArray2([1, 2, 3, 5], [1, 2, 3, 4, 5]); //?
+
+function destroyer2(arr) {
+  var args = Array.from(arguments).slice(1);
+
+  return arr.filter(function (val) {
+    return !args.includes(val);
+  });
+}
+
+destroyer2([1, 2, 3, 1, 2, 3], 2, 3); //?
+
+function whatIsInAName2(collection, source) {
+  var arr = collection.filter(function (item) {
+    for (var i in source) {
+      if (source[i] != item[i]) {
+        return false; //?
+      }
+    }
+    return true;
+  });
+  return arr; //?
+}
+
+whatIsInAName2(
+  [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" },
+  ],
+  { last: "Capulet" }
+);
+
+const person = {
+  name: "Edward",
+  city: "New York",
+  age: 37,
+  isStudent: true,
+  skills: ["javascript", "html", "css"],
+};
+person.country = "India";
+const message = `Hi, I am ${person.name} , I live in ${person.city} I am from ${person.country} I have ${person.skills.length} skills`; //?
+
+person;
+
+for (let key in person) {
+  console.log(`${key} => ${person[key]}`);
+}
+
+const personProps = Object.keys(person); //?
+console.log(personProps);
+personProps;
+
+const personInfo = Object.values(person);
+personInfo;
+
+const pets = [
+  {
+    name: "Joey",
+    type: "Dog",
+    breed: "Australian Shepherd",
+    age: 8,
+    photo: "img/aussie.jpg",
+  },
+  {
+    name: "Patches",
+    type: "Cat",
+    breed: "Domestic Shorthair",
+    age: 1,
+    photo: "img/tabby.jpg",
+  },
+  {
+    name: "Pugsley",
+    type: "Dog",
+    breed: "Pug",
+    age: 6,
+    photo: "img/pug.jpg",
+  },
+  {
+    name: "Simba",
+    type: "Cat",
+    breed: "Persian",
+    age: 5,
+    photo: "img/persian.jpg",
+  },
+  {
+    name: "Comet",
+    type: "Dog",
+    breed: "Golden Retriever",
+    age: 3,
+    photo: "img/golden.jpg",
+  },
+];
+let html = "";
+for (let i = 0; i < pets.length; i++) {
+  let pet = pets[i];
+  html += `
+    
+    <H2> ${pet.name}</H2>
+    <h3> Type is ${pet.type}</h3>
+    <h3> Breed is ${pet.Breed}</h3>
+    <p> Age is ${pet.age}</p>
+    `;
+}
+
+function translatePigLatin(str) {
+  let consonantRegex = /^[^aeiou]+/;
+  let myConsonants = str.match(consonantRegex);
+
+  return myConsonants !== null
+    ? str.replace(consonantRegex, "").concat(myConsonants).concat("ay")
+    : str.concat("way");
+}
+
+translatePigLatin("consonant"); //?
+
+function myReplace(str, before, after) {
+  return str
+    .split(" ")
+    .map((x) =>
+      x == before
+        ? x[0] == x[0].toUpperCase()
+          ? after[0].toUpperCase() + after.slice(1)
+          : after.toLowerCase()
+        : x
+    )
+    .join(" ");
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"); //?

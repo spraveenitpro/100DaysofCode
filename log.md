@@ -124,3 +124,14 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 35-37: July 2,2020
+
+**Today's Progress**:
+
+1. Continuing Progress on FreeCodeCamp JS lessons
+2. continued 30 Apps with Wesbos to solidify JS knowledge
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

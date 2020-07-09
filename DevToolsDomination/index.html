@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      // Regular
+
+      console.log("hello");
+
+      // Interpolated
+
+      console.log("hello %s string", "💩");
+
+      // Styled
+
+      console.log(
+        "%c I am some test",
+        "font-size:50px; text-shadow: 10px 10px 0 blue"
+      );
+
+      // warning!
+
+      console.warn("Oh No!!");
+
+      // Error :|
+
+      console.error("oh No!");
+      // Info
+
+      console.info("oh No! 💀");
+
+      // Testing
+      const p = document.querySelector("p");
+      console.assert(1 === 2, "Error");
+
+      // clearing
+
+      //console.clear();
+
+      // Viewing DOM Elements
+      console.dir(p);
+
+      // Grouping together
+
+      dogs.forEach((dog) => {
+        console.log(`This is ${dog.name}`);
+      });
+
+      // counting
+
+      // timing
+    </script>
+  </body>
+</html>

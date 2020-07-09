@@ -559,3 +559,57 @@ function myReplace1(str, before, after) {
 }
 
 myReplace1("A quick brown fox jumped over the lazy dog", "jumped", "leaped"); //?
+
+function fearNotLetter(str) {
+  for (var i = 0; i < str.length; i++) {
+    var code = str.charCodeAt(i);
+
+    if (code !== str.charCodeAt(0) + i) {
+      return String.fromCharCode(code - 1);
+    }
+  }
+  return undefined;
+}
+
+fearNotLetter("abce"); //?
+
+function uniteUnique(...arrays) {
+  const flatArray = [].concat(...arrays); //?
+  return [...new Set(flatArray)]; //?
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+function convertHTML(str) {
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;",
+  };
+
+  return str
+    .split(" ")
+    .map((word) => htmlEntities[word] || word)
+    .join(" "); //?
+}
+
+convertHTML("Dolce & Gabbana"); //?
+
+//1,1,2,3,5,8,13,21...
+
+function fibonacci(num) {
+  var a = 0;
+  var b = 1;
+  var result = b;
+
+  for (var i = 1; i < num; i++) {
+    console.log(result);
+    result = a + b; //?
+    a = b;
+    b = result;
+  }
+}
+
+fibonacci(10); //?

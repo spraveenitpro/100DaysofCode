@@ -71,7 +71,85 @@
       const bs = bubbleSort(nums);
       wr();
       wr();
+
       document.write(bs);
+
+      // Insertion Sort
+
+      var insertionSort = (nums) => {
+        for (let i = 1; i < nums.length; i++) {
+          for (let j = 0; j < i; j++) {
+            snapshot(nums);
+            console.log(`i is ${nums[i]} and j is ${nums[j]}`);
+
+            if (nums[i] < nums[j]) {
+              let spliced = nums.splice(i, 1);
+              nums.splice(j, 0, spliced[0]);
+            }
+          }
+        }
+      };
+
+      console.log(insertionSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
+
+      // MergeSort
+
+      const mergeSort = (nums) => {
+        if (nums.length < 2) {
+          return nums;
+        }
+
+        const length = nums.length;
+        const middle = Math.floor(length / 2);
+
+        const left = nums.slice(0, middle);
+        const right = nums.slice(middle, length);
+
+        const sortedLeft = mergeSort(left);
+        const sortedRight = mergeSort(right);
+
+        return stitch(sortedLeft, sortedRight);
+      };
+
+      const stitch = (left, right) => {
+        const results = [];
+
+        while (left.length && right.length) {
+          if (left[0] <= right[0]) {
+            results.push(left.shift());
+          } else {
+            results.push(right.shift());
+          }
+        }
+
+        while (left.length) {
+          results.push(left.shift());
+        }
+
+        while (right.length) {
+          results.push(right.shift());
+        }
+        return results;
+      };
+
+      // QuickSort
+      const quickSort = (nums) => {
+        if (nums.length <= 1) return nums;
+        const pivot = nums[nums.length - 1];
+
+        const left = [];
+        const right = [];
+
+        for (let i = 0; i < nums.length - 1; i++) {
+          if (nums[i] < pivot) {
+            left.push(nums[i]);
+          } else {
+            right.push(nums[i]);
+          }
+        }
+
+        return [...quickSort(left), pivot, ...quickSort(right)];
+      };
     </script>
   </body>
 </html>

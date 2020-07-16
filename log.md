@@ -146,3 +146,34 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 42: July 13,2020
+
+**Today's Progress**:
+
+1. 4 semesters of CS - Frontend Masters
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 43: July 14,2020
+
+**Today's Progress**:
+
+1. 4 semesters of CS - Frontend Masters
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 44: July 14,2020
+
+**Today's Progress**:
+
+1. 4 semesters of CS - Completed Sorting Algorithms
+2. 4 semesters of CS - Beginning Data Structures
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

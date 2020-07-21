@@ -177,3 +177,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 50: July 20,2020
+
+**Today's Progress**:
+
+1. 4 semesters of CS - Completed
+
+**Thoughts:** Mid Point, time to change gears
+
+**Link to work:** NA

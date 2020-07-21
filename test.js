@@ -1,4 +1,4 @@
-// Foreach loop
+/* // Foreach loop
 console.clear();
 
 var numbers = [34, 3, 1, 21, 4, 98, 54, 2, 344, 652, 21, 12];
@@ -208,3 +208,220 @@ console.clear();
 var obj = objArray.find((ob) => ob.id == 3);
 
 console.log(obj); //?
+
+// Basic Recursion:
+
+let wr = (msg = "----") => document.write(`<br> ${msg}`); //?
+
+// Insertion Sort
+
+var insertionSort = (nums) => {
+  for (let i = 1; i < nums.length; i++) {
+    for (let j = 0; j < i; j++) {
+      snapshot(nums);
+      console.log(`i is ${nums[i]} and j is ${nums[j]}`);
+
+      if (nums[i] < nums[j]) {
+        let spliced = nums.splice(i, 1);
+        nums.splice(j, 0, spliced[0]);
+      }
+    }
+  }
+};
+
+insertionSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]); //?
+
+// Quick Sort
+
+// QuickSort
+const quickSort = (nums) => {
+  if (nums.length <= 1) return nums;
+  const pivot = nums[nums.length - 1];
+
+  const left = [];
+  const right = [];
+
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] < pivot) {
+      left.push(nums[i]);
+    } else {
+      right.push(nums[i]);
+    }
+  }
+
+  return [...quickSort(left), pivot, ...quickSort(right)];
+};
+
+let qs = quickSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]);
+
+/*
+  AVL Tree
+  
+  Name you class/function (anything we can call new on) Tree
+  
+  I would suggest making a Node class as well (it will help _a lot_ with AVL trees) Whereas with BSTs we 
+  could get away with most of the logic living in the Tree class, that will be a lot tougher with AVL
+  trees dues how the function calls must be recursive in order to get the balancing correct.
+  
+  Tree must a method called add that takes a value and adds it to the tree and then correctly balances the
+  tree. There is only one correct structure for any given order of adding numbers and the unit tests enforce
+  that structure.
+  
+  If you have any questions conceptually about balancing the tree, refer to the class website.
+  
+  There is a tree visualization engine that should run automatically. Make sure you are calling the properties
+  of the Nodes as follows:
+  value - integer - the value being store in the tree
+  left  - Node    - the subtree containing Node's with values less than the current Node's value
+  right - Node    - the subtree containing Node's with values greater than the current Node's value
+  
+  As always, you can rename describe to xdescribe to prevent the unit tests from running and the visualization
+  from displaying
+
+*/
+/*
+class Tree {
+  constructor() {
+    this.root = null;
+  }
+
+  add(value) {
+    if (!this.root) {
+      this.root = new Node(value);
+    } else {
+      this.root.add(value);
+    }
+  }
+
+  toObject() {
+    return this.root;
+  }
+}
+
+class Node {
+  constructor(value, left = null, right = null) {
+    this.value = value;
+    this.left = left;
+    this.right = right;
+    this.height = 1;
+  }
+
+  add(value) {
+    if (value < this.value) {
+      // go left
+      if (this.left) {
+        this.left.add(value);
+      } else {
+        this.left = new Node(value);
+      }
+
+      if (!this.right || this.right.height < this.left.height) {
+        this.height = this.left.height + 1;
+      }
+    } else {
+      if (this.right) {
+        this.right.add(value);
+      } else {
+        this.right = new Node(value);
+      }
+
+      if (!this.left || this.right.height > this.left.height) {
+        this.height = this.right.height + 1;
+      }
+    }
+
+    this.balance();
+  }
+
+  balance() {
+    const rightHeight = this.right ? this.right.height : 0;
+    const leftHeight = this.left ? this.left.height : 0;
+
+    console.log(this.value, leftHeight, rightHeight);
+
+    if (leftHeight > rightHeight + 1) {
+      const leftRightHeight = this.left.right ? this.left.right.height : 0;
+      const leftLeftHeight = this.left.left ? this.left.left.height : 0;
+
+      if (leftRightHeight > leftLeftHeight) {
+        this.left.rotateRR();
+      }
+
+      this.rotateLL();
+    } else if (rightHeight > leftHeight + 1) {
+      const rightRightHeight = this.right.right ? this.right.right.height : 0;
+      const rightLeftHeight = this.right.left ? this.right.left.height : 0;
+
+      if (rightLeftHeight > rightRightHeight) {
+        this.right.rotateLL();
+      }
+
+      this.rotateRR();
+    }
+  }
+
+  rotateRR() {
+    const valueBefore = this.value;
+    const leftBefore = this.left;
+    this.value = this.right.value;
+    this.left = this.right;
+    this.right = this.right.right;
+    this.left.right = this.left.left;
+    this.left.left = leftBefore;
+    this.left.value = valueBefore;
+    this.left.updateInNewLocation();
+    this.updateInNewLocation();
+  }
+  rotateLL() {
+    const valueBefore = this.value;
+    const rightBefore = this.right;
+    this.value = this.left.value;
+    this.right = this.left;
+    this.left = this.left.left;
+    this.right.left = this.right.right;
+    this.right.right = rightBefore;
+    this.right.value = valueBefore;
+    this.right.updateInNewLocation();
+    this.updateInNewLocation();
+  }
+  updateInNewLocation() {
+    if (!this.right && !this.left) {
+      this.height = 1;
+    } else if (
+      !this.right ||∏
+      (this.left && this.right.height < this.left.height)
+    ) {
+      this.height = this.left.height + 1;
+    } else {
+      //if (!this.left || this.right.height > this.left.height)
+      this.height = this.right.height + 1;
+    }
+  }
+  serialize() {
+    const ans = { value: this.value };
+    ans.left = this.left === null ? null : this.left.serialize();
+    ans.right = this.right === null ? null : this.right.serialize();
+    ans.height = this.height;∏
+    return ans;
+  }
+} */
+
+// Functional ProgrammingP
+
+var num = [2, 3, 4, 5, 6, 7];
+
+const double = (num) => 2 * num;
+const doubleEach = (input) => input.map(double);
+
+const square = (num) => num * num;
+const squareEach = (input) => input.map(square);
+
+const doubleAndSquareEach = (input) => input.map(double).map(square);
+
+/* var transform = num.map(function (no) {
+  return no * no;
+}); */
+
+console.log(doubleEach(num));
+console.log(squareEach(num));
+console.log(doubleAndSquareEach(num));

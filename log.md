@@ -187,3 +187,14 @@
 **Thoughts:** Mid Point, time to change gears
 
 **Link to work:** NA
+
+### Day 51: July 20,2020
+
+**Today's Progress**:
+
+1. Started top 10 OWASP course on TTH
+2. Completed an application on Browser localstorage
+
+**Thoughts:** Mid Point, time to change gears
+
+**Link to work:** NA

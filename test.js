@@ -406,7 +406,7 @@ class Node {
   }
 } */
 
-// Functional ProgrammingP
+// Functional Programming
 
 var num = [2, 3, 4, 5, 6, 7];
 
@@ -425,3 +425,16 @@ const doubleAndSquareEach = (input) => input.map(double).map(square);
 console.log(doubleEach(num));
 console.log(squareEach(num));
 console.log(doubleAndSquareEach(num));
+
+// API request
+
+var requestURL = "https://api.exchangerate.host/latest?base=BTC&symbols=USD";
+var request = new XMLHttpRequest();
+request.open("GET", requestURL);
+request.responseType = "json";
+request.send();
+
+request.onload = function () {
+  var response = request.response;
+  console.log(response);
+};

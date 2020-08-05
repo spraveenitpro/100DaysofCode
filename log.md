@@ -198,3 +198,25 @@
 **Thoughts:** Mid Point, time to change gears
 
 **Link to work:** NA
+
+### Day 58: August 3rd ,2020
+
+**Today's Progress**:
+
+1. Completed top 10 OWASP course on TTH
+2. Completed 30 days of JS apps by WESBOS
+
+**Thoughts:** Mid Point, time to change gears
+
+**Link to work:** NA
+
+### Day 59: August 4th ,2020
+
+**Today's Progress**:
+
+1. Made the plan for the next 20 days
+2. Started building an E-Commerce app in React.
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

@@ -220,3 +220,23 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 60: August 5th ,2020
+
+**Today's Progress**:
+
+1. Building the restaurant menu app
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 61: August 6th ,2020
+
+**Today's Progress**:
+
+1. Completed the Menu Page and state management
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

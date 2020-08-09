@@ -240,3 +240,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 62: August 7th ,2020
+
+**Today's Progress**:
+
+1. Completed Firebase integration and localstorage
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

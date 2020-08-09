@@ -250,3 +250,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 63: August 8th ,2020
+
+**Today's Progress**:
+
+1. Introduction to ExpressJS
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
+app.set("view engine", "pug");
 app.get("/", (req, res) => {
-  res.send("<h1>It works!</h1>");
+  res.render("index");
 });
 
 app.get("/hello", (req, res) => {

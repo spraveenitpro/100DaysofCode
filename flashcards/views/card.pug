@@ -1,13 +1,8 @@
-doctype html
-html(lang="en")
- head
- title Flash Cards
- body
-  header
-   h1 Flash Cards
+extends layout.pug
+
+block content
   section#content
    h2= prompt
-   p
-    i Hint: #{hint}
-  footer
-   p  An App to  help create Flash Cards
+   if hint
+    p
+     i Hint: #{hint}

@@ -9,15 +9,6 @@ router.get("/", (req, res) => {
     res.redirect("/hello");
   }
 });
-
-router.get("/cards", (req, res) => {
-  //res.locals.prompt = "Who is burried in Grants tomb";
-  res.render("card", {
-    prompt: "Who is burried in Grants tomb",
-    hint: "Think about whose tomb it is",
-  });
-});
-
 //GoodBye Route
 
 router.post("/goodbye", (req, res) => {

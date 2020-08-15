@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const records = require("./records");
+app.use(express.json());
 
 // Send a GET request to  /quotes to READ a list of quotes
 
@@ -20,6 +21,14 @@ app.get("/quotes/:id", async (req, res) => {
 });
 
 // Send a POST request [Create]
+
+app.post("/quotes", (req, res) => {
+  const quote = records.createQuote({
+    quote: req.body.quote,
+    author: req.body.author,
+  });
+  res.json(quote);
+});
 
 // Send a PUT request [Update]
 

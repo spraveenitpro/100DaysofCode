@@ -1,20 +1,17 @@
-var router = require("./router");
+var router = require("./router.js");
+//Problem: We need a simple way to look at a user's badge count and JavaScript point from a web browser
+//Solution: Use Node.js to perform the profile look ups and server our template via HTTP
 
-// 1. Create a web server
+//Create a web server
+var http = require('http');
+http.createServer(function (request, response) {
+  router.home(request, response);
+  router.user(request, response);
+}).listen(3000);
+console.log('Server running at http://<workspace-url>/');
 
-var http = require("http");
-http
-  .createServer(function (request, response) {
-    // response.write("This is before the end \n");
-    //response.end("Hello World\n");
-    //response.write("This is after the end\n");
 
-    router.home(request, response);
-    router.user(request, response);
-  })
-  .listen(1337, "127.0.0.1");
-console.log("Server running at http://127.0.0.1:1337/");
 
-// 3. Handle POST route for /
 
-// 5. Function that handles the reading of files and merge in value
+
+

@@ -260,3 +260,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 70 - 71: August 20th ,2020
+
+**Today's Progress**:
+
+1. ORMS and Node
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

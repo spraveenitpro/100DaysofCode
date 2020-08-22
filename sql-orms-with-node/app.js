@@ -1,43 +1,45 @@
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize({
-  dialect: "sqlite",
-  storage: "movies.db",
-  logging: false,
-});
-
-/* (async () => {
-  try {
-    await sequelize.authenticate();
-    console.log("Connection to the database is successful");
-  } catch (error) {
-    console.log("Connection to the database is not successful");
-  }
-})(); */
-
-// Movie model
-
-class Movie extends Sequelize.Model {}
-Movie.init(
-  {
-    title: Sequelize.STRING,
-  },
-  { sequelize }
-);
+const db = require("./db");
+const { Movie, Person } = db.models;
 
 (async () => {
-  await sequelize.sync({ force: true });
+  await db.sequelize.sync({ force: true });
   try {
-    const movieInstances = await Promise.all([
-      Movie.create({
-        title: "Toy Story",
-      }),
-      Movie.create({
-        title: "The Incredibles",
-      }),
-    ]);
-    const moviesJSON = movieInstances.map((movie) => movie.toJSON());
-    console.log(moviesJSON);
+    const movie = await Movie.create({
+      title: "Toy Story",
+      runtime: 81,
+      releaseDate: "1995-11-22",
+      isAvailableOnVHS: true,
+    });
+    console.log(movie.toJSON());
+
+    const movie2 = await Movie.create({
+      title: "The Incredibles",
+      runtime: 115,
+      releaseDate: "2004-04-14",
+      isAvailableOnVHS: true,
+    });
+    console.log(movie2.toJSON());
+
+    const movie3 = await Movie.create({
+      title: "Knives Out",
+      runtime: 105,
+      releaseDate: "2020-04-14",
+      isAvailableOnVHS: true,
+    });
+    console.log(movie3.toJSON());
+    // New Person record
+    const person = await Person.create({
+      firstName: "Tom",
+      lastName: "Hanks",
+    });
+    console.log(person.toJSON());
   } catch (error) {
-    console.log("Error connecting to DB!");
+    //console.error("Error connecting to the database: ", error);
+    if (error.name === "SequelizeValidationError") {
+      const errors = error.errors.map((err) => err.message);
+      console.error("Validation errors: ", errors);
+    } else {
+      throw error;
+    }
   }
 })();

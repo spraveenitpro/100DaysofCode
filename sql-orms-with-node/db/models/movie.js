@@ -16,7 +16,6 @@ module.exports = (sequelize) => {
           notNull: {
             msg: 'Please provide a value for "title"',
           },
-
           notEmpty: {
             // custom error message
             msg: 'Please provide a value for "title"',
@@ -55,7 +54,7 @@ module.exports = (sequelize) => {
         defaultValue: false, // set default value
       },
     },
-    { tableName: "my_movies_table", sequelize }
+    { sequelize }
   );
   return Movie;
 };

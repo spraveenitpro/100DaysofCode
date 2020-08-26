@@ -280,3 +280,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 73: August 25th ,2020
+
+**Today's Progress**:
+
+1. Taking this week to brush up basics, continuing JS basics course on TeamTreeHouse
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

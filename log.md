@@ -290,3 +290,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 74: August 26th ,2020
+
+**Today's Progress**:
+
+1. JavaScript Loops, Arrays and Objects
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

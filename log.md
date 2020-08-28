@@ -300,3 +300,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 75: August 27th ,2020
+
+**Today's Progress**:
+
+1. Setup a react front end to talk to an express backend
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

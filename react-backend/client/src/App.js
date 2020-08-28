@@ -3,14 +3,10 @@ import React, { useState, useEffect } from "react";
 function App() {
   const [username, setUsername] = useState([]);
 
-  useEffect(async () => {
-    /* fetch("/users")
+  useEffect(() => {
+    fetch("/users")
       .then((res) => res.json())
-      .then((username) => setUsername(username)); */
-
-    const response = await fetch("/users");
-    const data = await response.json();
-    setUsername(data);
+      .then((username) => setUsername(username));
   }, []);
 
   return (

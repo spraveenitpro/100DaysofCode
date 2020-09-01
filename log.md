@@ -310,3 +310,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 79: August 31st ,2020
+
+**Today's Progress**:
+
+1. Completed Full Stack Exercise Logger app with MERN stack
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

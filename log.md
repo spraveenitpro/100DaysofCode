@@ -320,3 +320,23 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 80: September 5th ,2020
+
+**Today's Progress**:
+
+1. Completed Full Stack Todo app with MERN stack
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 81: August 6th ,2020
+
+**Today's Progress**:
+
+1. Tried to deploy test MERN Apps to Heroku, failed with error
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

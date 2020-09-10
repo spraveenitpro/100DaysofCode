@@ -340,3 +340,23 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 82: August 8th ,2020
+
+**Today's Progress**:
+
+1. Build the express/mongoDB backend for the daily journal app
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 81: August 9th ,2020
+
+**Today's Progress**:
+
+1. Began building the React front end for listing Daily logs and the create page
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

@@ -58,7 +58,7 @@ class Dailies extends Component {
   }
 
   render() {
-    let { dailies } = this.state;
+    //let { dailies } = this.state;
     return (
       <div>
         <h1> Daily Journal</h1>

@@ -360,3 +360,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 82: August 10th ,2020
+
+**Today's Progress**:
+
+1. Completed the listing of the daily logs and the create daily log page with bootstrap
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

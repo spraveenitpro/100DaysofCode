@@ -11,8 +11,9 @@ function CreateDaily() {
   const [values, setValues] = useState({
     date: new Date(),
     mood: "",
-    notes: "",
+    note: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleMoodChange = (event) => {
     event.persist();
@@ -26,13 +27,26 @@ function CreateDaily() {
     event.persist();
     setValues((values) => ({
       ...values,
-      notes: event.target.value,
+      note: event.target.value,
     }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+
+    console.log(values);
+    axios
+      .post("http://localhost:3001/daily/add", values)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+
+    setValues({ date: new Date(), mood: "", note: "" });
   };
 
   return (
     <div className="container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label for="exampleFormControlInput1">Mood</label>
           <input
@@ -54,7 +68,7 @@ function CreateDaily() {
             id="exampleFormControlTextarea1"
             rows="3"
             onChange={handleNoteChange}
-            value={values.notes}
+            value={values.note}
           ></textarea>
         </div>
         <div className="form-group">

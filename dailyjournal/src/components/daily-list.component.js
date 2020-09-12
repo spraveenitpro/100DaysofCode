@@ -45,7 +45,7 @@ class Dailies extends Component {
       .then((res) => {
         if (res.data) {
           this.setState({ dailies: res.data });
-          console.log(res.data);
+          //console.log(res.data);
         }
       })
       .catch((err) => console.log(err));

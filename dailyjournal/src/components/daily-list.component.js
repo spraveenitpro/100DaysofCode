@@ -1,33 +1,19 @@
-/* import React, { useEffect, useState } from "react";
-import axios from "axios";
-
-function DailyList() {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    axios
-      .get("http://localhost:6000/daily/")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  return <p>This is the list of Dailies</p>;
-}
-
-export default DailyList; */
-
 import React, { Component } from "react";
 import axios from "axios";
 
+var divStyle = {
+  width: "18rem",
+  //display: "inline-block",
+};
+
 const Daily = (props) => (
-  <tr>
-    <td>{props.daily.date}</td>
-    <td>{props.daily.mood}</td>
-    <td>{props.daily.note}</td>
-  </tr>
+  <div class="card border-primary mb-3 mx-auto " style={divStyle}>
+    <div class="card-header">{props.daily.date}</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">{props.daily.mood}</h5>
+      <p class="card-text">{props.daily.note}</p>
+    </div>
+  </div>
 );
 
 class Dailies extends Component {
@@ -60,19 +46,11 @@ class Dailies extends Component {
   render() {
     //let { dailies } = this.state;
     return (
-      <div>
-        <h1> Daily Journal</h1>
-        <table className="table">
-          <thead className="thead-light">
-            <tr>
-              <th>Date</th>
-              <th>Mood</th>
-              <th>Note</th>
-            </tr>
-          </thead>
-          <tbody>{this.dailyList()}</tbody>
-        </table>
-      </div>
+      <>
+        <div class="container">
+          <div className="row ">{this.dailyList()}</div>
+        </div>
+      </>
     );
   }
 }

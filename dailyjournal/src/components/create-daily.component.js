@@ -42,6 +42,7 @@ function CreateDaily() {
       .catch((err) => console.log(err));
 
     setValues({ date: new Date(), mood: "", note: "" });
+    window.location = "/";
   };
 
   return (

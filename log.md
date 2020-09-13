@@ -331,7 +331,7 @@
 
 **Link to work:** NA
 
-### Day 81: August 6th ,2020
+### Day 81: September 6th ,2020
 
 **Today's Progress**:
 
@@ -341,7 +341,7 @@
 
 **Link to work:** NA
 
-### Day 82: August 8th ,2020
+### Day 82: September 8th ,2020
 
 **Today's Progress**:
 
@@ -351,7 +351,7 @@
 
 **Link to work:** NA
 
-### Day 81: August 9th ,2020
+### Day 81: September 9th ,2020
 
 **Today's Progress**:
 
@@ -361,11 +361,21 @@
 
 **Link to work:** NA
 
-### Day 82: August 10th ,2020
+### Day 82: September 10th ,2020
 
 **Today's Progress**:
 
 1. Completed the listing of the daily logs and the create daily log page with bootstrap
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 84: September 12th ,2020
+
+**Today's Progress**:
+
+1. Completed adding entry feature for the daily journal app, polished it with some bootstrap
 
 **Thoughts:** Keep it going
 

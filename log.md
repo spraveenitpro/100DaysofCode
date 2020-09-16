@@ -396,7 +396,7 @@
 **Today's Progress**:
 
 1. Read up on Binary numbers and how to convert base 10 to base 2 numbers
-2. Practices options API with WordPress
+2. Practiced options API with WordPress
 
 **Thoughts:** Keep it going
 

@@ -380,3 +380,24 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 86: September 14th, 2020
+
+**Today's Progress**:
+
+1. Played with Reactstrap and made a UI that fetches/displays profile details from an API
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 87: September 15th , 2020
+
+**Today's Progress**:
+
+1. Read up on Binary numbers and how to convert base 10 to base 2 numbers
+2. Practices options API with WordPress
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

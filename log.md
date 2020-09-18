@@ -397,6 +397,18 @@
 
 1. Read up on Binary numbers and how to convert base 10 to base 2 numbers
 2. Practiced options API with WordPress
+3. Created a Book ratings app with HarperDB
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 88: September 17th , 2020
+
+**Today's Progress**:
+
+1. Extended WooCommerce Analytics with a mini extension
+2. Read up on WordPress security
 
 **Thoughts:** Keep it going
 

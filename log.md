@@ -413,3 +413,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 89: September 18th , 2020
+
+**Today's Progress**:
+
+1. Read up on WordPress security
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

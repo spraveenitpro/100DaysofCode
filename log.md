@@ -423,3 +423,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 90: September 20th , 2020
+
+**Today's Progress**:
+
+1. Read up on WordPress security/ Gutenberg Block Building
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

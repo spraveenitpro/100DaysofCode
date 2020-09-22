@@ -433,3 +433,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 91: September 21st , 2020
+
+**Today's Progress**:
+
+1. Worked on a Single Page portfolio app with React
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

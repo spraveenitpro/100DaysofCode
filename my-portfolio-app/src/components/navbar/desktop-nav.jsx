@@ -31,18 +31,7 @@ const desktopNav = (props) => (
               WORK
             </Link>
           </li>
-          <li>
-            <Link
-              activeClass="active-link"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              ABOUT
-            </Link>
-          </li>
+
           <li>
             <a href="https://praveen.blog" target="_blank">
               BLOG

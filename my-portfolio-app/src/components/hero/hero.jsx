@@ -14,8 +14,8 @@ const hero = () => (
         <Col md={12} lg={6}>
           <div className="hero-info">
             <h1 className="weight800 font60">Hi!</h1>
-            <h1 className="weight800 font60">
-              I am Praveen and this are somethings I have been working on..
+            <h1 className="weight800 font40">
+              I am Praveen and these are somethings I have been working on..
             </h1>
           </div>
         </Col>

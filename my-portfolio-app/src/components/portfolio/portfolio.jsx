@@ -5,12 +5,18 @@ import Masonry from "react-masonry-css";
 import "./portfolio.scss";
 //Assets
 import Arrow from "../../assets/portfolio/arrow.svg";
-import Preview1 from "../../assets/portfolio/project01/preview.png";
-import Preview2 from "../../assets/portfolio/project02/preview.png";
+import Preview1 from "../../assets/portfolio/project01/preview.gif";
+import Preview2 from "../../assets/portfolio/project02/preview.gif";
 import Preview3 from "../../assets/portfolio/project03/preview.png";
 import Preview4 from "../../assets/portfolio/project04/preview.png";
-import Preview5 from "../../assets/portfolio/project05/preview.png";
-import Preview6 from "../../assets/portfolio/project06/preview.png";
+import Preview5 from "../../assets/portfolio/project05/preview.gif";
+import Preview6 from "../../assets/portfolio/project06/preview.gif";
+import Preview7 from "../../assets/portfolio/project07/preview.gif";
+import Preview8 from "../../assets/portfolio/project08/preview.gif";
+import Preview9 from "../../assets/portfolio/project09/preview.png";
+import Preview10 from "../../assets/portfolio/project10/preview.gif";
+import Preview11 from "../../assets/portfolio/project11/preview.gif";
+import Preview12 from "../../assets/portfolio/project12/preview.gif";
 //Components
 import Button from "../ui-components/button/button";
 import Title from "../ui-components/title/title";
@@ -24,81 +30,75 @@ class Portfolio extends React.Component {
       projects: [
         {
           id: "1",
-          preview: Preview2,
-          title: "Lamp",
-          tag: "JavaScript",
+          preview: Preview1,
+          title: "Interface with Ionic Framework",
+          tag: "Mobile",
         },
         {
           id: "2",
           preview: Preview2,
-          title: "Smartwatch",
-          tag: "JavaScript",
+          title: "Mobile App with React Native",
+          tag: "Mobile",
         },
         {
           id: "3",
-          preview: Preview2,
-          title: "Speakerphone",
-          tag: "JavaScript",
+          preview: Preview3,
+          title: "React Frontend with API",
+          tag: "React",
         },
         {
           id: "4",
-          preview: Preview2,
-          title: "Sneakers",
+          preview: Preview4,
+          title: "CRUD app with React",
           tag: "React",
         },
         {
           id: "5",
-          preview: Preview2,
-          title: "Label",
-          tag: "React",
+          preview: Preview5,
+          title: "Full Stack Blog",
+          tag: "FullStack",
         },
         {
           id: "6",
-          preview: Preview2,
-          title: "lemons",
-          tag: "React",
+          preview: Preview6,
+          title: "Whack a Mole Game",
+          tag: "JavaScript",
         },
         {
           id: "7",
-          preview: Preview2,
-          title: "Sneakers",
-          tag: "Mobile",
+          preview: Preview7,
+          title: "Todo List",
+          tag: "JavaScript",
         },
         {
           id: "8",
-          preview: Preview2,
-          title: "Label",
-          tag: "Mobile",
+          preview: Preview8,
+          title: "Four in a Row Game",
+          tag: "JavaScript",
         },
         {
           id: "9",
-          preview: Preview2,
-          title: "lemons",
-          tag: "FullStack",
+          preview: Preview9,
+          title: "Meme Generator",
+          tag: "React",
         },
         {
           id: "10",
-          preview: Preview2,
-          title: "lemons",
-          tag: "FullStack",
+          preview: Preview10,
+          title: "Weather App",
+          tag: "JavaScript",
         },
         {
           id: "11",
-          preview: Preview2,
-          title: "lemons",
+          preview: Preview11,
+          title: "Book Rating App",
           tag: "FullStack",
-        },
-        {
-          id: "11",
-          preview: Preview2,
-          title: "lemons",
-          tag: "Mobile",
         },
         {
           id: "12",
-          preview: Preview2,
-          title: "lemons",
-          tag: "Mobile",
+          preview: Preview12,
+          title: "Contact Cards",
+          tag: "FullStack",
         },
       ],
       // PORTFOLIO GALLERY WILL LOAD THIS AFTER FUNCTION "filterGallery" FINISH FILTERING

@@ -107,8 +107,93 @@ function miniMaxSum(arr) {
   let minset = arr.slice(0, -1);
 
   const sum = arr.reduce((a, total) => a + total);
-
-  console.log(maxset, minset, sum);
+  console.log(sum - arr[arr.length - 1], sum - arr[0]);
 }
 
 miniMaxSum([3, 4, 2, 5, 9]);
+
+/** BirthDay Cake Candles
+ *
+ */
+
+function birthdayCakeCandles(candles) {
+  // Write your code here
+
+  // Find the biggest value
+
+  var max = candles.reduce(function (a, b) {
+    return Math.max(a, b);
+  });
+
+  let count = 0;
+
+  for (var i = 0; i < candles.length; i++) {
+    if (candles[i] === max) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(birthdayCakeCandles([3, 2, 1, 3]));
+
+/*
+ * Complete the timeConversion function below.
+ */
+function timeConversion(s) {
+  /*
+   * Write your code here.
+   */
+  let period = s.slice(-2);
+  let hour = s.slice(0, 2);
+  let min = s.slice(3, 5);
+  let sec = s.slice(6, 8);
+  let militaryHour = "";
+
+  if (period === "AM") {
+    if (hour == "12") {
+      militaryHour = "00";
+    } else {
+      militaryHour = hour;
+    }
+  } else {
+    if (hour == "12") {
+      militaryHour = parseInt(hour);
+    } else {
+      militaryHour = parseInt(hour) + 12;
+    }
+  }
+
+  // 1. 12AM becomes 00
+
+  // 2. 1AM to 12PM ->  Do nothing
+
+  // 3. 1PM to 11PM -> Add 12
+
+  return militaryHour + ":" + min + ":" + sec;
+}
+
+console.log(timeConversion("01:05:45AM"));
+console.log(timeConversion("07:05:45PM"));
+
+/** Grading Students
+ *
+ */
+
+/*
+ * Complete the 'gradingStudents' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY grades as parameter.
+ */
+
+function gradingStudents(grades) {
+  // Write your code here
+
+  for (var i = 0; i < grades.length; i++) {}
+
+  return grades;
+}
+
+console.log(gradingStudents([84, 29, 57]));

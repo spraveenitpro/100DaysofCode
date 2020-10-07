@@ -434,11 +434,22 @@
 
 **Link to work:** NA
 
-### Day 91: September 21st , 2020
+### Day 91-100: October 2nd , 2020
 
 **Today's Progress**:
 
 1. Worked on a Single Page portfolio app with React
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA
+
+### Day 1: October 6th , 2020
+
+**Today's Progress**:
+
+1. Studied Bits, Bytes, Building with Binary - #BaseCS [https://medium.com/basecs/bits-bytes-building-with-binary-13cb4289aafa]
+2. WordPress plugin Development 101 series - #WordPress [What makes a plugin, General Best Practices]
 
 **Thoughts:** Keep it going
 

@@ -454,3 +454,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 2: October 7th , 2020
+
+**Today's Progress**:
+
+1. Studied Hexes and Other Magical Numbers, Linked Lists and Stacks - #BaseCS [https://medium.com/basecs]
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

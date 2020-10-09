@@ -464,3 +464,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 3: October 8th , 2020
+
+**Today's Progress**:
+
+1. Studied Trees and Queues - #BaseCS [https://medium.com/basecs]
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

@@ -474,3 +474,13 @@
 **Thoughts:** Keep it going
 
 **Link to work:** NA
+
+### Day 4: October 13th , 2020
+
+**Today's Progress**:
+
+1. Practiced OOPS concepts in WordPress
+
+**Thoughts:** Keep it going
+
+**Link to work:** NA

@@ -490,3 +490,4 @@
 1. Hacker Rank 30 day challenge - Day 5
 2. Read up - https://blog.bhanuteja.dev/30-git-commands-that-i-frequently-use
 3. Read up -https://www.freecodecamp.org/news/how-to-learn-coding-approach-is-everything/
+4. Played with Document API in vanilla JS https://ui.dev/dom/?s=bytes/&ck_subscriber_id=965556828

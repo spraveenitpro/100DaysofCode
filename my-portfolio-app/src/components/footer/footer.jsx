@@ -13,7 +13,11 @@ const partnerBox = () => (
         <Col xs={12} sm={6} md={6}>
           <div className="footer-box">
             <img src={Logo} alt="logo" />
-            <p> 2020 -Obstacle is the path</p>
+            <p>
+              {" "}
+              2020 - If you want to fly, you must give up everything that weighs
+              you down
+            </p>
           </div>
         </Col>
         <Col xs={12} sm={6} md={6}>

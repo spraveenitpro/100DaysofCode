@@ -491,3 +491,9 @@
 2. Read up - https://blog.bhanuteja.dev/30-git-commands-that-i-frequently-use
 3. Read up -https://www.freecodecamp.org/news/how-to-learn-coding-approach-is-everything/
 4. Played with Document API in vanilla JS https://ui.dev/dom/?s=bytes/&ck_subscriber_id=965556828
+
+### Day 2: November 24 2020
+
+1. Hacker Rank 30 day challenge - Day 6
+2. Read up - https://www.freecodecamp.org/news/escape-tutorial-purgatory/
+3. Wired up the pokemon api with vanilla JS

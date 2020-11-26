@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <h1 id="date"></h1>
+    <h2>Tasks</h2>
+    <div id="tasks"></div>
+    <h2>Metrics</h2>
+    <div id="metrics"></div>
+    <h2>Important</h2>
+    <div id="important"></div>
+
+</div>
+<script>
+
+    class Day {
+        constructor(date){
+            this.date = date;
+            this.tasks = [];
+            this.metrics = [];
+        }
+
+        addTask(task) {
+            this.tasks.push(task);
+        }
+        addMetric(metric){
+            this.metrics.push(metric);
+        }
+
+        getTask(index){
+            return this.tasks[index];
+        }
+    }
+
+    function addNewDay() {
+        let today = new Date();
+        console.log(today);
+        document.getElementById("date").innerHTML = today.toUTCString();
+    }
+
+    function getListHTML(arr) {
+        var html = '';
+        html += '<ul>';
+        
+        arr.forEach(element => {
+            html += '<li>';
+            html += element; 
+            html += '</li>';
+        });
+        html += '</ul>';
+        return html;
+    }
+
+    var today = new Day(addNewDay())
+    today.addTask("Code Morning and Evening");
+    today.addTask("Medidate in the dawn");
+    today.addTask("Workout in the evening");
+    today.addMetric("22 Interactions");
+    today.addMetric("15 min Workout")
+    today.addMetric("10 min Meditation");
+
+    document.getElementById("tasks").innerHTML = getListHTML(today.tasks);
+    document.getElementById("metrics").innerHTML = getListHTML(today.metrics);
+    document.getElementById("important").innerHTML = today.getTask(0);
+
+
+</script>
+
+</body>
+</html>

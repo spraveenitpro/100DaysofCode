@@ -497,3 +497,9 @@
 1. Hacker Rank 30 day challenge - Day 6
 2. Read up - https://www.freecodecamp.org/news/escape-tutorial-purgatory/
 3. Wired up the pokemon api with vanilla JS
+
+### Day 3: November 25 2020
+
+1.  Hacker Rank 30 day challenge - Day 7
+2.  Read up on Imposter Syndrome
+3.  Coded a daily activity tracker with Object Oriented programming based on https://jsbin.com/giniyay/edit?html,js,output

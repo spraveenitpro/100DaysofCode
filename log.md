@@ -504,7 +504,7 @@
 2.  Read up on Imposter Syndrome
 3.  Coded a daily activity tracker with Object Oriented programming based on https://jsbin.com/giniyay/edit?html,js,output
 
-### Day 3: November 26 2020
+### Day 4: November 26 2020
 
 1. Hacker Rank 30 day challenge - Day 8
 2. Implemented stacks in JavaScript - fcc

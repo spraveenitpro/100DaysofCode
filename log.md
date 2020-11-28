@@ -509,3 +509,9 @@
 1. Hacker Rank 30 day challenge - Day 8
 2. Implemented stacks in JavaScript - fcc
 3. TBD: Wild Fire Tracker in React
+
+### Day 5: November 27 2020
+
+1. Hacker Rank 30 day challenge - Day 9
+2. Read up on Sets in JavaScript - fcc
+3. Wild Fire Tracker in React - Completed

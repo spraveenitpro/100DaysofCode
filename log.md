@@ -515,3 +515,18 @@
 1. Hacker Rank 30 day challenge - Day 9
 2. Read up on Sets in JavaScript - fcc
 3. Wild Fire Tracker in React - Completed
+
+### Day 6: November 30 2020
+
+1. Hacker Rank 30 day challenge - Day 10
+2. BST in JavaScript
+
+### Day 7: December 1 2020
+
+1. Hacker Rank 30 day challenge - Day 11
+2. BST in JavaScript
+
+### Day 8: December 2 2020
+
+1. Hacker Rank 30 day challenge - Day 12
+2. BST in JavaScript

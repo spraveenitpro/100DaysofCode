@@ -531,6 +531,10 @@
 1. Hacker Rank 30 day challenge - Day 12
 2. BST in JavaScript
 
-### Day 8: December 2 2020
+### Day 8: December 3 2020
 
-1.BST in JavaScript 2.
+1.BST in JavaScript 2. Hash tables
+
+### Day 9: December 4 2020
+
+1. Hash tables

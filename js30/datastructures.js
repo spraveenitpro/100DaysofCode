@@ -595,25 +595,77 @@ bst.add(20);
 
 /**Hash Table */
 
-function hashStringToInt5() {
-  return 5;
+function hashStringToInt5(s, tableSize) {
+  //return 5;
+  let hash = 17;
+
+  for (let i = 0; i < s.length; i++) {
+    hash = (13 * hash * s.charCodeAt(i)) % tableSize;
+    console.log(hash);
+  }
+
+  return hash;
 }
 
 class HashTable {
-  table = new Array(100);
-  getItem = (key) => {
-    const idx = hashStringToInt5(key);
-    return this.table[idx];
+  table = new Array(33);
+  numItems = 0;
+  //loadFactor = this.numItems / this.table.length;
+
+  resize = () => {
+    const newTable = new Array(this.table.length * 2);
+    this.table.forEach((item) => {
+      if (item) {
+        item.forEach(([key, value]) => {
+          const idx = hashStringToInt(key, newTable.length);
+          if (newTable[idx]) {
+            newTable[idx].push([key.value]);
+          } else {
+            newTable[idx] = [[key, value]];
+          }
+          newTable[idx] = value;
+        });
+      }
+    });
+    this.table = newTable;
   };
 
   setItem = (key, value) => {
-    const idx = hashStringToInt5(key);
-    this.table[idx] = value;
+    this.numItems++;
+    const loadFactor = this.numItems / this.table.length;
+    if (loadFactor > 0.8) {
+      //resize
+    }
+
+    const idx = hashStringToInt5(key, this.table.length);
+    if (this.table[idx]) {
+      this.table[idx].push([key.value]);
+    } else {
+      this.table[idx] = [[key, value]];
+    }
+  };
+  getItem = (key) => {
+    const idx = hashStringToInt5(key, this.table.length);
+
+    if (!this.table[idx]) {
+      return null;
+    }
+    return this.table[idx].find((x) => x[0] === key)[1];
   };
 }
 
 const myTable = new HashTable();
 myTable.setItem("FirstName", "Pete");
-myTable.getItem("FirstName");
+console.log(myTable.table.length);
+myTable.setItem("LastName", "Tim");
+console.log(myTable.table.length);
+myTable.setItem("age", "67");
+console.log(myTable.table.length);
+myTable.setItem("DOB", "12/12/1968");
+console.log(myTable.table.length);
 
 console.log(myTable.getItem("FirstName"));
+console.log(myTable.getItem("LastName"));
+console.log(myTable.getItem("age"));
+console.log(myTable.getItem("DOB"));
+console.log(myTable.table.length);

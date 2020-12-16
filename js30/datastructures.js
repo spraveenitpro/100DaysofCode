@@ -595,77 +595,78 @@ bst.add(20);
 
 /**Hash Table */
 
-function hashStringToInt5(s, tableSize) {
-  //return 5;
-  let hash = 17;
-
-  for (let i = 0; i < s.length; i++) {
-    hash = (13 * hash * s.charCodeAt(i)) % tableSize;
-    console.log(hash);
-  }
-
-  return hash;
-}
-
-class HashTable {
-  table = new Array(33);
-  numItems = 0;
-  //loadFactor = this.numItems / this.table.length;
-
-  resize = () => {
-    const newTable = new Array(this.table.length * 2);
-    this.table.forEach((item) => {
-      if (item) {
-        item.forEach(([key, value]) => {
-          const idx = hashStringToInt(key, newTable.length);
-          if (newTable[idx]) {
-            newTable[idx].push([key.value]);
-          } else {
-            newTable[idx] = [[key, value]];
-          }
-          newTable[idx] = value;
-        });
-      }
-    });
-    this.table = newTable;
+//
+// Trie Data Structure
+let Node = function () {
+  this.keys = new Map();
+  this.end = false;
+  this.setEnd = function () {
+    this.end = true;
   };
+  this.isEnd = function () {
+    return this.end;
+  };
+};
 
-  setItem = (key, value) => {
-    this.numItems++;
-    const loadFactor = this.numItems / this.table.length;
-    if (loadFactor > 0.8) {
-      //resize
-    }
+let Trie = function () {
+  this.root = new Node();
 
-    const idx = hashStringToInt5(key, this.table.length);
-    if (this.table[idx]) {
-      this.table[idx].push([key.value]);
+  this.add = function (input, node = this.root) {
+    if (input.length == 0) {
+      node.setEnd();
+      return;
+    } else if (!node.keys.has(input[0])) {
+      node.keys.set(input[0], new Node());
+      return this.add(input.substr(1), node.keys.get(input[0]));
     } else {
-      this.table[idx] = [[key, value]];
+      return this.add(input.substr(1), node.keys.get(input[0]));
     }
   };
-  getItem = (key) => {
-    const idx = hashStringToInt5(key, this.table.length);
 
-    if (!this.table[idx]) {
-      return null;
+  this.isWord = function (word) {
+    let node = this.root;
+    while (word.length > 1) {
+      if (!node.keys.has(word[0])) {
+        return false;
+      } else {
+        node = node.keys.get(word[0]);
+        word = word.substr(1);
+      }
     }
-    return this.table[idx].find((x) => x[0] === key)[1];
+    return node.keys.has(word) && node.keys.get(word).isEnd() ? true : false;
   };
-}
 
-const myTable = new HashTable();
-myTable.setItem("FirstName", "Pete");
-console.log(myTable.table.length);
-myTable.setItem("LastName", "Tim");
-console.log(myTable.table.length);
-myTable.setItem("age", "67");
-console.log(myTable.table.length);
-myTable.setItem("DOB", "12/12/1968");
-console.log(myTable.table.length);
+  this.print = function () {
+    let words = new Array();
+    let search = function (node, string) {
+      if (node.keys.size != 0) {
+        for (let letter of node.keys.keys()) {
+          search(node.keys.get(letter), string.concat(letter));
+        }
+        if (node.isEnd()) {
+          words.push(string);
+        }
+      } else {
+        string.length > 0 ? words.push(string) : undefined;
+        return;
+      }
+    };
+    search(this.root, new String());
+    return words.length > 0 ? words : mo;
+  };
+};
 
-console.log(myTable.getItem("FirstName"));
-console.log(myTable.getItem("LastName"));
-console.log(myTable.getItem("age"));
-console.log(myTable.getItem("DOB"));
-console.log(myTable.table.length);
+myTrie = new Trie();
+myTrie.add("ball");
+myTrie.add("bat");
+myTrie.add("doll");
+myTrie.add("dork");
+myTrie.add("do");
+myTrie.add("dorm");
+myTrie.add("send");
+myTrie.add("sense");
+
+console.log(myTrie.isWord("doll"));
+console.log(myTrie.isWord("dor"));
+console.log(myTrie.isWord("dorf"));
+console.log(myTrie.print());

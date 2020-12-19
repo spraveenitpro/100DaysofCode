@@ -538,3 +538,7 @@
 ### Day 9: December 4 2020
 
 1. Hash tables
+
+### Day 10: December 18th 2020
+
+1. Worked on Snake game in JavaScript

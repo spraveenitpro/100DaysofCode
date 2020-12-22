@@ -542,3 +542,8 @@
 ### Day 10: December 18th 2020
 
 1. Worked on Snake game in JavaScript
+
+### Day 11: December 21st 2020
+
+1. Worked on HackerRank Challenge
+2. Continued working on DataStructures and Algorithms

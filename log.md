@@ -552,3 +552,8 @@
 
 1. Worked on HackerRank Challenge
 2. Continued working on DataStructures and Algorithms
+
+### Day 13: December 28th 2020
+
+1. Worked on HackerRank Challenge
+2. Continued working on DataStructures and Algorithms

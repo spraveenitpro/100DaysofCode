@@ -18,3 +18,8 @@
 ### Day 4: Feb 10th 2021
 
 Stuck on Security vulnerabilities with web application
+
+### Day 5: Feb 11th 2021
+
+1. Stuck on Security vulnerabilities with web application
+2. Almost done with 30 days of code with hackerrank

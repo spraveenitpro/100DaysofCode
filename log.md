@@ -23,3 +23,7 @@ Stuck on Security vulnerabilities with web application
 
 1. Stuck on Security vulnerabilities with web application
 2. Almost done with 30 days of code with hackerrank
+
+### Day 6: Feb 16th 2021
+
+1. Pushed a PR for the frontend helper function for sanitizing input

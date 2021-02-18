@@ -27,3 +27,10 @@ Stuck on Security vulnerabilities with web application
 ### Day 6: Feb 16th 2021
 
 1. Pushed a PR for the frontend helper function for sanitizing input
+
+### Day 7: Feb 17th 2021
+
+1. Brushed up on working with arrays in PHP with https://www.dyn-web.com/php/arrays/iterate/
+2. Continued above with https://linuxhint.com/print_array_php/
+3. PHP validation and sanitization https://www.bitdegree.org/learn/php-filtering
+4. PHP Sanitize Input, Process Data and Deal with Queries https://www.bitdegree.org/learn/php-sanitize-input

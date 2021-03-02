@@ -35,3 +35,8 @@ Stuck on Security vulnerabilities with web application
 3. PHP validation and sanitization https://www.bitdegree.org/learn/php-filtering
 4. PHP Sanitize Input, Process Data and Deal with Queries https://www.bitdegree.org/learn/php-sanitize-input
 5. Learnt to loop through multi dimensional array with https://www.tutorialrepublic.com/faq/foreach-loop-through-multidimensional-array-in-php.php
+
+### Day 8: March 1st 2021
+
+1. Worked on HackerRank challenge
+2. Worked on Sanitization helper function for backend

@@ -42,5 +42,9 @@ Stuck on Security vulnerabilities with web application
 2. Worked on Sanitization helper function for backend
 
 ### Day 10: March 3rd 2021
+
 1. Worked on Hackerank Interview preparation
 
+### Day 11: March 4th 2021
+
+1. Worked on the WordPress plugin

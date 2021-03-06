@@ -48,3 +48,7 @@ Stuck on Security vulnerabilities with web application
 ### Day 11: March 4th 2021
 
 1. Worked on the WordPress plugin
+
+### Day 12: March 5th 2021
+
+1. Worked on the WordPress plugin - Completed XSS check

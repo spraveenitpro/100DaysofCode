@@ -60,3 +60,8 @@ Stuck on Security vulnerabilities with web application
 ### Day 14: March 7th 2021
 
 1. Began doing Sorting algorithms from Algorithms JavaScript book
+
+### Day 15: March 9th 2021
+
+1. Worked on the WordPress plugin - Fixed minor suggestions
+2. HackerRank challenge

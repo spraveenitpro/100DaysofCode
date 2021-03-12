@@ -74,3 +74,4 @@ Stuck on Security vulnerabilities with web application
 ### Day 17: March 11th 2021
 
 1. Setup PHPCS and WordPress ruleset
+2. DS & A learnup

@@ -62,3 +62,18 @@ console.log(
     [2, 2, 1],
   ])
 );
+
+// Minimum Value
+
+function minimumValue(arrays) {
+  let minIndex = 0;
+
+  for (let i = 1; i <= arrays.length; i++) {
+    if (arrays[minIndex] > arrays[i]) {
+      minIndex = i;
+    }
+  }
+  return arrays[minIndex];
+}
+
+console.log(minimumValue([34, 23, 6, 98, 23, 22, 144, 44, 166, 3243, 203, 8]));

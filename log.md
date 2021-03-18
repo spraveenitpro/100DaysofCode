@@ -79,3 +79,7 @@ Stuck on Security vulnerabilities with web application
 ### Day 18: March 16th 2021
 
 1. DS & A learnup
+
+### Day 19: March 17th 2021
+
+1. Code project - expand collapse button optimization

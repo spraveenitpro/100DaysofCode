@@ -87,3 +87,7 @@ Stuck on Security vulnerabilities with web application
 ### Day 20: March 18th 2021
 
 1. Algorithm - Fizzbuzz
+
+### Day 21: March 19th 2021
+
+1. Algorithm - Array chunking

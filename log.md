@@ -92,6 +92,11 @@ Stuck on Security vulnerabilities with web application
 
 1. Algorithm - Array chunking
 
-### Day 22: March 21th 2021
+### Day 22: March 21st 2021
 
 1. Code project - expand collapse button optimization
+
+### Day 23: March 22nd 2021
+
+1. Code project - expand collapse button optimization
+2. Algorithm challenges

@@ -100,3 +100,8 @@ Stuck on Security vulnerabilities with web application
 
 1. Code project - expand collapse button optimization
 2. Algorithm challenges
+
+### Day 24: March 23rd 2021
+
+1. Code project - expand collapse button optimization
+2. Algorithm challenges

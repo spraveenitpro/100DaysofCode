@@ -77,3 +77,21 @@ function minimumValue(arrays) {
 }
 
 console.log(minimumValue([34, 23, 6, 98, 23, 22, 144, 44, 166, 3243, 203, 8]));
+
+// Bubble sort
+
+function bubbleSort(a) {
+  let swaps = 0;
+
+  for (let i = 0; i < a.length - 1; i++) {
+    for (let j = 0; j < a.length - 1; j++) {
+      if (a[j] > a[j + 1]) {
+        [a[j], a[j + 1]] = [a[j + 1], a[j]];
+        swaps++;
+      }
+    }
+  }
+  return a;
+}
+
+console.log(bubbleSort([4, 2, 1, 8, 4, 3, 0, 43, 12, 22, 23]));

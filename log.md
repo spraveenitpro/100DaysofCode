@@ -122,3 +122,7 @@ Stuck on Security vulnerabilities with web application
 ### Day 28: April 1st 2021
 
 1. Code Project - Submitted the Add/Remove teams feature - refactored code.
+
+### Day 29: April 4th 2021
+
+1. Code Project - Submitted the Add/Remove teams feature - refactored code.

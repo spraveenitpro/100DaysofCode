@@ -131,3 +131,7 @@ Stuck on Security vulnerabilities with web application
 
 1. Code Project - Some work on XSS
 2. Started JS 50 projects
+
+### Day 31: April 14th 2021
+
+1. Did a javascript practice project

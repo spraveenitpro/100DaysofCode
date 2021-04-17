@@ -139,3 +139,7 @@ Stuck on Security vulnerabilities with web application
 ### Day 32: April 15th 2021
 
 1. Did a javascript practice project - day 2
+
+### Day 33: April 16th 2021
+
+1. Did a javascript practice project - day 3

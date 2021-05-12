@@ -44,6 +44,8 @@ h1 {
   padding: 2em 1.5em;
   border-radius: 6px;
   box-shadow: 11px 18px 54px rgba(0, 0, 0, 0.11);
+  clip-path: circle(50% at 100% 0%);
+  transition: clip-path 0.3s ease-in-out;
 }
 
 .chk-container {
@@ -107,4 +109,41 @@ h1 {
 .car-price {
   font-size: 1.5rem;
   margin: 0;
+}
+
+@media only screen and (min-width: 900px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .labels {
+    display: block;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    display: grid;
+    grid-template-columns: 40% 30% 20% auto;
+    padding: 0.2em 1em;
+  }
+
+  .cars {
+    display: grid;
+    grid-template-columns: 40% 30% auto;
+  }
+
+  .far,
+  .fas {
+    margin-right: 1.6em;
+  }
+
+  .icons {
+    margin-bottom: 0;
+  }
+
+  .headings p {
+    margin-: 0.5em 0 3rem;
+  }
 }
